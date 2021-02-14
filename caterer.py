@@ -152,4 +152,8 @@ async def on_ready():
         bot.first_time = False
 
 
-bot.run(os.getenv('DISCORD_TOKEN'))
+from dotenv import load_dotenv
+
+load_dotenv()
+TOKEN = os.getenv('DISCORD_TOKEN')        
+bot.run(TOKEN)
